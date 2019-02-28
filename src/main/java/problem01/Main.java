@@ -3,6 +3,8 @@ package problem01;
 import java.util.Random;
 import java.util.Scanner;
 
+import problem02.String;
+
 
 public class Main {
 	
@@ -39,6 +41,20 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
-		return true;
+		if(answer!=randomNumber) {
+			count++;
+			if(answer>randomNumber) {
+				max=answer;
+			}
+			if(answer<randomNumber) {
+				min=answer;
+			}
+			return false;
+		}
+		else {
+			count++;
+			return true;
+		}
+		
 	}
 }
